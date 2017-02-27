@@ -38,7 +38,7 @@ public class CountTask extends RecursiveTask<Integer> {
 	}
 
 	public static void main(String[] args) {
-		ForkJoinPool forkJoinPool = new ForkJoinPool();//ForkJoinPool由ForkJoinTask数组和ForkJoinWorkerThread数组组成，ForkJoinTask数组负责存放程序提交给ForkJoinPool的任务，而ForkJoinWorkerThread数组负责执行这些任务。
+		ForkJoinPool forkJoinPool = new ForkJoinPool();// ForkJoinPool由ForkJoinTask数组和ForkJoinWorkerThread数组组成，ForkJoinTask数组负责存放程序提交给ForkJoinPool的任务，而ForkJoinWorkerThread数组负责执行这些任务。
 		CountTask task = new CountTask(1, 1000);
 		Future<Integer> result = forkJoinPool.submit(task);
 		try {
